@@ -13,6 +13,12 @@ public class RegisterPage extends BaseClass {
 
 	@FindBy(name = "lastname")
 	private WebElement lname;
+	
+	@FindBy(name = "reg_email__")
+	private WebElement emailiD ;
+	
+	@FindBy(name = "reg_passwd__")
+	private WebElement pass ;
 
 	public RegisterPage() {
 
@@ -28,5 +34,12 @@ public class RegisterPage extends BaseClass {
 		fname.sendKeys(Fname);
 		lname.sendKeys(Lname);
 
+	}
+	
+	public void emailIDAndPass(String emailID, String PassWord)
+	{
+		emailiD.sendKeys(emailID);
+		pass.sendKeys(PassWord);
+		
 	}
 }

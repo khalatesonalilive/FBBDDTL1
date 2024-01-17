@@ -5,3 +5,6 @@ Feature: Test the Facebook Application
 
   Scenario: Validate the FirstName and LastName
     And user enters the valid firstname and lastname
+
+  Scenario: validate Email ID and Password Functionality
+    And user enters a valid emailId and Password
