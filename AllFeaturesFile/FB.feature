@@ -8,3 +8,6 @@ Feature: Test the Facebook Application
 
   Scenario: validate Email ID and Password Functionality
     And user enters a valid emailId and Password
+
+  Scenario: Validate DOB Functionality
+    And user enters a valid date , month and year
