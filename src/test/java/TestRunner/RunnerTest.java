@@ -5,7 +5,10 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		features = { "AllFeaturesFile" }, glue = { "Steps" }, dryRun = false, monochrome = true
+		features = { "AllFeaturesFile" }, 
+		glue = { "Steps" },
+		dryRun = false,
+		monochrome = true
 
 )
 
