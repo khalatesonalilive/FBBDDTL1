@@ -11,3 +11,6 @@ Feature: Test the Facebook Application
 
   Scenario: Validate DOB Functionality
     And user enters a valid date , month and year
+
+  Scenario: Validate Gender Functionality
+    And user select a valid gender radiobutton

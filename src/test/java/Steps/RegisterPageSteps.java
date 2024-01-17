@@ -36,4 +36,9 @@ public class RegisterPageSteps extends BaseClass {
 
 		registerPage.validateDOBFunctionality("14", "Mar", "2000");
 	}
+
+	@Given("user select a valid gender radiobutton")
+	public void user_select_a_valid_gender_radiobutton() {
+		registerPage.selectGenderRadioButton();
+	}
 }

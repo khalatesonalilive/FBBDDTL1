@@ -14,22 +14,24 @@ public class RegisterPage extends BaseClass {
 
 	@FindBy(name = "lastname")
 	private WebElement lname;
-	
+
 	@FindBy(name = "reg_email__")
-	private WebElement emailiD ;
-	
+	private WebElement emailiD;
+
 	@FindBy(name = "reg_passwd__")
-	private WebElement pass ;
-	
-	@FindBy(name="birthday_day")
-	private WebElement bdate  ;
-	
-	@FindBy(name="birthday_month")
-	private WebElement bmonth ;
-	
-	@FindBy(name="birthday_year")
-	private WebElement  byear;
-	
+	private WebElement pass;
+
+	@FindBy(name = "birthday_day")
+	private WebElement bdate;
+
+	@FindBy(name = "birthday_month")
+	private WebElement bmonth;
+
+	@FindBy(name = "birthday_year")
+	private WebElement byear;
+
+	@FindBy(xpath = "//label[text()='Female']")
+	private WebElement femaleRadioButton;
 
 	public RegisterPage() {
 
@@ -46,35 +48,29 @@ public class RegisterPage extends BaseClass {
 		lname.sendKeys(Lname);
 
 	}
-	
-	public void emailIDAndPass(String emailID, String PassWord)
-	{
+
+	public void emailIDAndPass(String emailID, String PassWord) {
 		emailiD.sendKeys(emailID);
 		pass.sendKeys(PassWord);
-		
+
 	}
-	
-	public void validateDOBFunctionality(String Date, String Month, String Year)
-	{
-		
-		Select sel=new Select(bdate);
+
+	public void validateDOBFunctionality(String Date, String Month, String Year) {
+
+		Select sel = new Select(bdate);
 		sel.selectByVisibleText(Date);
-				
-		Select sel1=new Select(bmonth);
+
+		Select sel1 = new Select(bmonth);
 		sel1.selectByVisibleText(Month);
-		
-		Select sel2=new Select(byear);
+
+		Select sel2 = new Select(byear);
 		sel2.selectByVisibleText(Year);
-		
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public void selectGenderRadioButton() {
+
+		femaleRadioButton.click();
+	}
+
 }
